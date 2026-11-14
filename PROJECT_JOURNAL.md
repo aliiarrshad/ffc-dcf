@@ -50,3 +50,12 @@ Honestly, this merger stuff didn't click right away — took several rounds of w
 Next: FFC's actual industry economics (urea/DAP pricing, gas costs, government policy) before touching any forecast numbers.
 
 _____________________________________________________________________________________________________________________________________
+## 2026-11-15
+
+Completed the end-to-end DCF model in both Python and Excel today!
+
+Key milestones accomplished:
+1. Built `src/dcf_engine.py`: Encapsulates macroeconomic parameters (PIB risk-free rate 13.5%, ERP 6.5%, Beta 0.85, KIBOR borrowing cost 14.5%, marginal tax 39.0%), computes WACC (17.24%), projects 5-year operating financials (FY2026E-FY2030E), calculates FCFF, Gordon Growth Terminal Value, and resolves the Enterprise Value to Equity Value Bridge.
+2. Built `src/excel_builder.py`: Automatically generates `outputs/FFC_DCF_Valuation_Model.xlsx` with native, live Excel formulas across 8 beautifully formatted tabs (Executive Summary, Assumptions, WACC Buildup, Financial Forecast, DCF Valuation, Valuation Bridge, 2-Way Sensitivity Analysis, and Historical Audited Data).
+3. The Enterprise Value to Equity Value Bridge was a revelation: FFC's core fertilizer operations produce an Enterprise Value of PKR 401.59B (PKR 282.19/share). But FFC holds PKR 181.46B in short-term T-Bills, PKR 8.34B in cash, and PKR 79.07B in long-term strategic investments (AKBL, FCCL, TEL, AGL), against PKR 79.89B in total debt—leaving PKR 188.98B in net surplus liquid assets (PKR 132.79/share). Total Equity Value is PKR 590.56B, yielding an intrinsic fair value of PKR 414.98 per share (implied +20.3% upside over PKR 345 reference price).
+4. Unit tests implemented in `tests/test_dcf.py` (5/5 passing) validating all mathematical formulas, monotonic sensitivity behaviors, and workbook structure.

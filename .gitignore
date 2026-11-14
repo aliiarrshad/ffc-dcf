@@ -5,3 +5,10 @@ __pycache__/
 .~lock*
 *.tmp
 data/raw/*.pdf
+
+# Generated reports, documentation, PDFs, and model outputs
+*.pdf
+outputs/
+docs/
+*.docx
+*.html
