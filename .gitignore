@@ -6,9 +6,8 @@ __pycache__/
 *.tmp
 data/raw/*.pdf
 
-# Generated reports, documentation, PDFs, and model outputs
+# Generated documentation and temporary files
 *.pdf
-outputs/
 docs/
 *.docx
 *.html

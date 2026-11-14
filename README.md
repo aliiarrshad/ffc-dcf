@@ -30,7 +30,7 @@ ffc-dcf/
 │       ├── Financial-statements-2025.pdf
 │       └── sources.md                 # Data sources & page citation references
 ├── outputs/
-│   └── FFC_DCF_Valuation_Model.xlsx   # Live, dynamically linked Excel financial model (gitignored)
+│   └── FFC_DCF_Valuation_Model.xlsx   # Live, dynamically linked Excel financial model
 ├── src/
 │   ├── dcf_basics.py                  # Initial discounting prototype
 │   ├── dcf_engine.py                  # Core modular DCF engine (WACC, Forecast, TV, Bridge)
